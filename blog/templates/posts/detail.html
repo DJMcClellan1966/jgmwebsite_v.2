@@ -1,0 +1,15 @@
+{% extends 'jobs/base.html' %}
+
+{% block content %}
+
+<figcaption><h2>{{ blog.title }}</h2></figcaption>
+<h3>{{ blog.pub_date }}</h3>
+<article class="details">
+  <img src="{{ blog.image.url }}" alt="{{ blog.title }}"/>
+    <p>{{ blog.body }}</p>
+
+
+</article>
+
+<a class="btn btn-secondary" href="{% url 'blog' %}" role="button">Return to latest posts &raquo;</a>
+{% endblock %}

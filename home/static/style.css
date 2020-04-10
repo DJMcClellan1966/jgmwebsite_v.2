@@ -4,7 +4,12 @@ body {
   font-family: cursive, Arial, monospace;
   letter-spacing: 0.15em;
   border-color: #efefef;
-  background-image: url('/static/burst.jpg');
+
+}
+
+.background{
+  background-image: url('/static/pink spring.jpg');
+  background-position: center right;
 
 }
 
@@ -15,12 +20,18 @@ body {
   padding: 20px;
   border: 4px double #000;
   background-color: #ffffff;
+  opacity: .75;
 
 }
 
 #logo {
   width: 150px;
   margin: 10px auto 25px auto;
+
+}
+
+.footer{
+  text-align: center;
 
 }
 
@@ -41,7 +52,7 @@ li {
 }
 
 p {
-  text-align: center;
+  text-align: justify;
   width: 600px;
   margin: 20px auto 20px auto;
   font-weight: normal;

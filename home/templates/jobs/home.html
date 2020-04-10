@@ -11,15 +11,15 @@
     <title>jgmphotography home</title>
     <link rel="stylesheet" href="/static/style.css">
   </head>
-  <body>
+  <body class="background">
       <div id="homepage">
         <div id="logo">
           <h1>JGMPhotography</h1>
         </div>
 
           <ul id="navigation">
-            <li><a class="on" href="/gallery">Gallery</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a class="on" href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
             <li><a href="https://www.facebook.com/Jennifer-Golden-McClellan-Photography-101556664725140/">Facebook</a></li>
             <li><a href="mailto:jennifer.mcclellan@jgmphotography.net">Contact</a></li>
           </ul>
@@ -34,12 +34,12 @@
         </main>
 
       </div>
-    </div>
+
     <footer>
-     <div id="footer">
-       <p>Album is &copy; Jennifer McClellan {% now "Y" %}.</p>
+      <div>
+       <p class="footer">Album is &copy; Jennifer McClellan {% now "Y" %}.</p>
      </div>
     </footer>
-  </div>
+
   </body>
 </html>

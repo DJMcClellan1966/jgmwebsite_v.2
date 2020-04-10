@@ -7,15 +7,33 @@
     <meta name="robots" content="follow">
     <meta http-equiv="author" content="Douglas McClellan">
     <meta http-equiv="expires" content="">
+    <link rel="stylesheet" href="/static/blogstyle.css">
     <title>jgmphotography home</title>
   </head>
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>JGMPhotography</h1>
+        <nav>
+    <ul>
+      <li><a class="on" href="{% url 'gallery' %}">Gallery</a></li>
+      <li><a href="{% url 'blog' %}">Blog</a></li>
+      <li><a href="https://www.facebook.com/Jennifer-Golden-McClellan-Photography-101556664725140/">Facebook</a></li>
+      <li><a href="mailto:jennifer.mcclellan@jgmphotography.net">Contact</a></li>
+    </ul>
+  </nav>
+  </header>
     {% block content %}
     {% endblock %}
+
     <footer>
-     <div class="footer">
-       <p>Album is &copy; Jennifer McClellan {% now "Y" %}.</p>
-     </div>
+       <ul>
+         <li><a href="#">Back to top</li></a>
+         <li>Album is &copy;<a href="mailto:jennifer.mcclellan@jgmphotography.net">Jennifer McClellan {% now "Y" %}.</a></li>
+         <li>Read <a href="{% url 'privacy' %}">privacy policy</a></li>
+         <li>Read <a href="{% url 'terms' %}">terms of service</a></li>
+       </ul>
     </footer>
+  </div><!-- .wrapper -->
   </body>
 </html>

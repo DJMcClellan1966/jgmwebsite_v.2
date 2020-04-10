@@ -1,0 +1,31 @@
+{% extends 'jobs/base.html' %}
+
+{% block content %}
+
+<section class="blogs">
+  {% for blog in blogs.all %}
+
+  <figcaption>
+    <h2><a href="{% url 'detail' blog.id %}">{{ blog.title }}</a><h2></figcaption>
+      <h3>{{ blog.pub_date }}<h3>
+
+      <article class="">
+      <img src="{{ blog.image.url }}" alt="{{ blog.title }}"/>
+      <p>{{ blog.summary }}</p>
+      </article>
+      {% endfor %}
+
+    </section>
+
+    <aside>
+      <section>
+        <h2>Archives</h2>
+        {% for blog in blogs.all %}
+
+        <li><a href="{% url 'detail' blog.id %}">{{ blog.pub_date}}</a></li>
+
+        {% endfor %}
+      </section>
+    </aside>
+
+    {% endblock %}
