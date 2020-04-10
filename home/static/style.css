@@ -9,13 +9,14 @@ body {
 
 .background{
   background-image: url('/static/pink spring.jpg');
-  background-position: center right;
-
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #homepage {
-  max-width: 940px;
-  min-width: 720px;
+  max-width: auto;
+  min-width: auto;
   margin: 10px auto 10px auto;
   padding: 20px;
   border: 4px double #000;
