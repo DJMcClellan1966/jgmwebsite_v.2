@@ -1,0 +1,49 @@
+section.thumbnails {
+  float: left;
+  width: auto;
+
+}
+
+img {
+  float: left;
+  width: 50px;
+  height: 50px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+
+}
+
+
+
+figcaption {
+
+  font-size: 90%;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+#photo-viewer {
+position: relative;
+height: 300px;
+overflow: hidden;
+}
+
+#photo-viewer.is-loading:after {
+  content: url(images/load.jpg);
+  position:  absolute;
+  top: 0;
+  right: 0;
+}
+
+#photo-viewer img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: 50%;
+  left: 50%;
+}
+
+a.active {
+  opacity: 0.3%;
+}

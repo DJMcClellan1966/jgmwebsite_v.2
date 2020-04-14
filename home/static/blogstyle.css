@@ -51,9 +51,8 @@ nav li a:hover, nav li a.current {
 
 section.blogs {
   float: left;
-  width: auto;
-
-
+  width: 650;
+  border-right: 1px solid #eeeeee;
 }
 
 
@@ -61,8 +60,7 @@ article {
   display: block;
   clear: both;
   overflow: auto;
-  width: 659px;
-
+  width: 650px;
   padding-left: : 15px;
 
 }
@@ -71,14 +69,14 @@ article.details {
   display: block;
   clear: both;
   overflow: auto;
-  width: 659px;
+  width: auto;
   padding-left: : 15px;
 }
 
 img {
   float: left;
   width: auto;
-  height: 220px;
+  height: 250px;
   padding-bottom: 5px;
   padding-right: 10px;
 
@@ -90,13 +88,10 @@ figcaption {
   text-align: left;
   padding-left: 10px;
   padding-top: 10px;
-
-
-
 }
 
 aside {
-  width: 230px;
+  width: 300px;
   float: left;
   padding: 0px 0px 0px 20px;
 }
@@ -104,6 +99,7 @@ aside {
 aside section a {
   display: block;
   padding: 10px;
+  border-bottom: 1px solid #eeeeee;
 
 }
 

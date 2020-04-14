@@ -1,12 +1,20 @@
 {% extends 'jobs/base.html' %}
 
-{% block content %}
-<div id="photo-viewer"></div>
-<div id="thumbnails">
-  <a href="#"></a>
-  <a href="#"></a>
-  <a href="#"></a>
 
-</div>
+{% block content %}
+
+
+<section class="thumbnails">
+  {% for photo in photos.all %}
+  <figcaption>
+  <h3>{{ photo.pub_date }}</h3>
+  <h2>{{ photo.title }}</h2></figcaption>
+  <article class="images">
+  <a href="{{ photo.photo.url }}" class="thumb">
+    <img src="{{ photo.photo.url}}" alt="{{photo.title}}">
+  </a>
+  </article>
+  {% endfor %}
+</section>
 
 {% endblock %}
