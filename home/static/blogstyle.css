@@ -75,8 +75,8 @@ article.details {
 
 img {
   float: left;
-  width: auto;
-  height: 250px;
+  width: 250px;
+  height: auto;
   padding-bottom: 5px;
   padding-right: 10px;
 

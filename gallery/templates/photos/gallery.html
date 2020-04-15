@@ -4,17 +4,13 @@
 {% block content %}
 
 
-<section class="thumbnails">
-  {% for photo in photos.all %}
-  <figcaption>
-  <h3>{{ photo.pub_date }}</h3>
-  <h2>{{ photo.title }}</h2></figcaption>
-  <article class="images">
-  <a href="{{ photo.photo.url }}" class="thumb">
-    <img src="{{ photo.photo.url}}" alt="{{photo.title}}">
-  </a>
-  </article>
-  {% endfor %}
-</section>
+    {% for photo in photos.all %}
+    <a href="{{ photo.photo.url }}">
+      <img src="{{ photo.photo.url}}" alt="{{photo.title}}">
+    </a>
+    {% endfor %}
+  
+
+
 
 {% endblock %}
