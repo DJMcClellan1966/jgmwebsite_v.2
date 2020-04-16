@@ -1,12 +1,6 @@
 from django.contrib import admin
 
-from .models import Image
+from .models import Image, Album
 
 admin.site.register(Image)
-
-class ImageAlbumAdmin(admin.ModelAdmin):
-    fieldsets = (
-    (None, {
-        'fields': ('title', 'images')
-    })
-    )
+admin.site.register(Album)
