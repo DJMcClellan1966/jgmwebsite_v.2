@@ -10,7 +10,7 @@
       <h3>{{ blog.pub_date }}<h3>
 
       <article class="">
-      <img src="{{ blog.image.url }}" alt="{{ blog.title }}"/>
+      <a href="{% url 'detail' blog.id %}"><img src="{{ blog.image.url }}" alt="{{ blog.title }}"/></a>
       <p>{{ blog.summary }}</p>
       </article>
       {% endfor %}

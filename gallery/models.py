@@ -10,13 +10,18 @@ class Image(models.Model):
     def __str__(self):
         return self.title
 
-    def __img__(self):
-        return self.image
+    class Meta:
+        ordering = ['title']
 
 class Album(models.Model):
     title = models.CharField(max_length=250)
-    images= models.ManyToManyField(Image, blank=True)
-    
+    images= models.ManyToManyField(Image, blank=True, related_name='image_albums')
+    highlight = models.OneToOneField(Image, null=True, blank=True,
+                                    on_delete=models.CASCADE,)
+
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ['title']
